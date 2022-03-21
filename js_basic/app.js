@@ -1,14 +1,8 @@
-//object 속성을 가진 데이터를 저장할 수 있게 함 
+//document는 브라우저에 이미 존재하는 객체 , HTML을 가리키는 객체
+const title = document.getElementById("title");
 
-const player = {
-    name : "jeongbin",
-    points : 10 ,
-    fat : true ,
+console.dir(title); // dir 더 자세한 정보 알려줌 
+title.innerText = "Got you";
 
-};
-console.log(player);
-console.log(player.name);
-console.log(player["name"]);
-player.fat = false; // 속성 변경 가능 
-player.lastName = "patato"; // 언제든지 속성 추가 가능 
-console.log(player);
+console.log(title.id);
+console.log(title.className);
