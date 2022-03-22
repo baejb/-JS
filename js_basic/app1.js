@@ -6,32 +6,16 @@ const title2=document.querySelector("div.hello:first-child h1");
 
 // click event 는 클릭하는것 ,click을 listen
 function handleTitleClick(){
-    title2.style.color="blue";
+    const currentColor=title2.style.color;
+    let newColor;
+    if(currentColor==="blue"){
+        newColor="tomato";
+    }
+    else{
+        newColor="blue";
+    }
+    title2.style.color = newColor;
 }
-function handleMouseEnter(){
-    title2.innerText = "Mouse is here!";
-}
-function handleMouseLeave(){
-    title2.innerText = "Mouse is Gone!";
-}
-function handleWindowResize(){
-    document.body.style.backgroundColor="tomato";
-}
-function handleWindowCopy(){
-    alert("copier!");
-}
-function handelWindowOffline(){
-    alert("SOS no WIFI");
-}
-function handelWindowOnline(){
-    alert("ALL GOOOD!");
-}
-//유저가 title2을 클릭하면 실행
-title2.addEventListener("click",handleTitleClick);
-title2.addEventListener("mouseenter",handleMouseEnter);
-title2.addEventListener("mouseleave",handleMouseLeave);
 
-window.addEventListener("resize",handleWindowResize);
-window.addEventListener("copy",handleWindowCopy);
-window.addEventListener("offline",handelWindowOffline);
-window.addEventListener("online",handelWindowOnline);
+
+title2.addEventListener("click",handleTitleClick);
