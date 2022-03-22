@@ -8,7 +8,15 @@ const title1=document.querySelector("div.hello:first-child h1");
 function handleTitleClick(){
     title1.style.color="blue";
 }
+function handleMouseEnter(){
+    title1.innerText = "Mouse is here!";
+}
+function handleMouseLeave(){
+    title1.innerText = "Mouse is Gone!";
+}
 
 //유저가 title을 클릭하면 실행
 title1.addEventListener("click",handleTitleClick);
+title1.addEventListener("mouseenter",handleMouseEnter);
+title1.addEventListener("mouseleave",handleMouseLeave);
 
