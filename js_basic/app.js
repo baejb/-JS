@@ -1,11 +1,8 @@
-//document는 브라우저에 이미 존재하는 객체 , HTML을 가리키는 객체
-const title = document.getElementById("title");
+const title =document.getElementsByTagName("h1");
+//querySelector는 element를 CSS 방식으로 검색할 수 있음 
+const title1=document.querySelector(".hello h1");
+//querySelector는 하나만 가져오니까 querySelectorAll 해주면 됨 
 
-console.dir(title); // dir 더 자세한 정보 알려줌 
-title.innerText = "Got you";
 
-console.log(title.id);
-console.log(title.className);
-
-const hellos=document.getElementsByClassName("hello");
-console.log(hellos);
+console.log(title);
+console.log(title1);
